@@ -39,7 +39,7 @@ def launch_data_gen(
     logger.info("Summarization of embeddings begins")
     spinLogger.info("Summarization of embeddings begins....")
 
-    encoding_gpt4 = tiktoken.encoding_for_model("gpt-4")
+    encoding_gpt4 = tiktoken.encoding_for_model(model_name)
 
     with open(seed_instructions_path, "r") as f:
         seed_instructions = json.load(f)
@@ -49,7 +49,7 @@ def launch_data_gen(
     summary_prompt = open("assets/prompt_summary.txt").read() + "\n"
     for _, doc in tqdm(enumerate(documents_for_summary)):
         summary = openai.ChatCompletion.create(
-            model="gpt-4",
+            model=model_name,
             messages=[
                 {
                     "role": "user",
