@@ -1,0 +1,224 @@
+{"instruction": "How would you retrieve a list of all users using the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write code to query a specific database using the POST /databases/{database_id}/query endpoint.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Show how to retrieve a particular comment using Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Use the Notion API to search for a page by its title.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How can you retrieve properties of a specific page using the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Demonstrate a way to interact with the Notion API using the provided JavaScript SDK.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a code to authenticate an integration with the Notion API using an integration token.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Use the Notion API to paginate through a list of objects, returning only a specified number of items.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How can you retrieve a list of block children using the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Create a function to fetch the next page of results from a previous request using the 'next_cursor' field.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Show how to send a DELETE request to a specific resource using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write code to update a page's properties using the PATCH method in the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Explain how to generate a cURL command to interact with the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Create an integration on the integration settings page to obtain an integration token for the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How can you use the Notion API to check if a paginated response includes the end of the list?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a function that uses the Notion API to retrieve a specific type of objects in the results.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Show how to handle JSON responses from the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Use the Notion API to send a POST request to a database resource.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How can you use the Notion API to limit the number of returned items in a response?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a code to identify the type of a resource in a response from the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Demonstrate how to use the Notion API to send a GET request to a user resource.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Explain how to use the 'start_cursor' parameter in a paginated request to the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Use the Notion API to retrieve the list of results from a paginated endpoint.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you use the Notion API to retrieve the 'object' field from a response?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write code to retrieve the 'has_more' field from a response using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Show how to send a PATCH request to a specific page using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Demonstrate how to authenticate a request to the Notion API using an integration token.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Use the Notion API to send a DELETE request to a database resource.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "Write a function to retrieve all users from the Notion workspace using the appropriate API endpoint.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you retrieve details of a specific comment with the provided comment_id in Notion using their API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a method that utilizes the Notion API to search for a title in a database.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Using the Notion API, fetch and display the properties of a specific page using its page_id and property_id.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Construct a function that utilizes cursor-based pagination to retrieve a list of objects from the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a function that takes in a database_id and queries the database using Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you use the Notion API to check if there are more items to retrieve in a paginated response?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Please code a function to get the next set of query results from a Notion database using the provided start_cursor.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Create a routine to fetch the block children of a given block_id using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Authenticate your application with the Notion API using the integration token.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Using the Notion API, make a PATCH request to modify a page.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How can you delete a block from a Notion page using their API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Construct a method to limit the number of returned items in a paginated request using Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write code to retrieve the next page of results from a paginated endpoint using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a function that sends a GET request to retrieve a user's details from the Notion workspace.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How can you use the Notion API to determine the type of objects in the results of a paginated response?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Using the Notion API, develop a function to retrieve the type of a top-level resource.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a routine to extract the UUIDv4 \"id\" property of a user using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a function that makes a DELETE request to remove a database from Notion.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Using the Notion API, construct a method to retrieve an ISO 8601 encoded date from a page.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How can you use the Notion API to retrieve a list of all databases in a workspace?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a system to continuously monitor and store updates from the Notion API using webhooks.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a function that uses the Notion API to get the total number of pages in a workspace.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script to retrieve the first 100 users of a workspace using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Construct a routine to fetch and display the comments of a specific page using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you use the Notion API to programmatically change the title of a page?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a function to search for a specific user in the Notion workspace using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script to retrieve all blocks from a specific page using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "How can you retrieve all users using the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a function to paginate through the results of a database query using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Using the Notion API, develop a method to search for a specific title in the pages.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Can you fetch the properties of a particular page using its page_id and property_id with the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Establish a connection to the Notion API using the integration token.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a function to retrieve comments by their comment_id using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  With the Notion API, how would you obtain the children of a particular block?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a method using the Notion API to check if more pages are available in the paginated results.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Use the Notion API to retrieve the next set of query results from a database.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Create a procedure to handle JSON responses from the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How can you use the Notion API's base URL to make a GET request?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Can you demonstrate how to handle API errors using the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script to update a page's property using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Using the Notion API, create a method to delete a block from a database.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Can you use the Notion API to get the type of objects in the results of a request?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a function to create an integration on the integration settings page using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a process to handle cursor-based pagination in the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a sample request using the Notion JavaScript SDK.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Create a function that uses the Notion API to retrieve the next_cursor from a response.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you use the Notion API to authenticate an integration token?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a script to use the POST method in the Notion API to make a request.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Show how to convert the ISO 8601 strings received from the Notion API into a more readable date format.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a method to handle PATCH requests using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script to retrieve a list of all databases using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Can you demonstrate how to use the Notion API to limit the number of returned items in a request?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a function to retrieve the \"has_more\" property from a paginated response using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Show how to parse JSON responses from the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you use the Notion API to retrieve the specific type of a resource?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "Retrieve a list of all users using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a method to retrieve a specific comment using its comment_id with the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write code to query a database using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you use the Notion API to search for a specific title?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Design a script to paginate through query results from a database using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Use the Notion API to retrieve a page property item using its page_id and property_id.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Authenticate your application with the Notion API using an integration token.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Using the Notion API, establish a connection to https://api.notion.com.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Can you demonstrate how to use the Notion API to retrieve a list of block children using a block_id?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Create a function to interact with the Notion API using JSON conventions to request and decode responses.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Utilize the Notion API to determine if there are more items to retrieve in a paginated list.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script that uses the Notion API to return ten items per API call.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Show how to use the Notion API to retrieve the next cursor value from a paginated list.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a method to retrieve the results array from the response of a paginated request using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a function that uses the Notion API to identify the type of objects in a results list.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Can you show how to modify the default number of items returned in a response from the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script to retrieve the next page of results from a paginated request using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Using the Notion API, write code to retrieve the type of resource for a given object.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Show how to use the Notion API to authenticate your application and issue a GET request to list all users.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a function to retrieve a user by their UUIDv4 id property using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script to retrieve a block's children with their ids using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Show how to search by title using the POST /search endpoint in the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Can you demonstrate how to retrieve a specific comment by its id using the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a function to retrieve a page property item by its id using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a method to query a database by its id using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a function to retrieve the next cursor value from a paginated response using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Can you illustrate how to authenticate your application with the Notion API using an integration token?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script that connects to the base URL of the Notion API and issues a GET request to list all users.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "Retrieve a list of all users in a specific workspace using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script to query a specific database and return the results.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you use the Notion API to search for a page by its title?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a function that uses cursor-based pagination to retrieve all items from a paginated endpoint.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a code snippet to authenticate a user with the Notion API using an integration token.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Create a method to extract the next_cursor value from a paginated API response.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you utilize the Notion API to retrieve the children of a specific block?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a process to delete a page from a Notion database using the API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a function that retrieves a comment by its ID using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How can you use the Notion API to update a specific property item on a page?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Use the Notion API to retrieve a specific user's details.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script to extract the 'has_more' field from a paginated API response.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you implement a function to retrieve a specific page's properties using its ID and the property_ID?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write an application that uses the Notion API to list all databases in a workspace.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a script to search for a database by its title.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you use the Notion API to parse JSON responses?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a function to extract the 'results' array from a paginated API response.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Create a script to modify a page property item using its ID.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Design a function that uses the Notion API to retrieve the 'type' string from a paginated API response.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How can you use the Notion API to paginate through a list of all users?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script that retrieves a block's children using its block_id.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a method to retrieve a comment by its comment_id using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Design an application that uses the Notion API to query a database.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script to extract the 'object' string from a paginated API response.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you implement a function to search by title using the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write an application to retrieve a page property item using its page_id and property_id.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Design a function that uses the Notion API to paginate through a list of all databases.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How can you use the Notion API to retrieve a block's children using its block_id?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "Retrieve all the comments of a specific block using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a function to query a Notion database using the POST /databases/{database_id}/query endpoint.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you use the Notion API to get the properties of a specific page?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a function that returns the next page of results from a paginated endpoint using the 'next_cursor' field.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Use the Notion API to list all users in the workspace.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Show how to use the Notion API to search a database by title.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Make a POST request to the Notion API to retrieve a specific comment.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Design a function that will handle authentication with the Notion API using an integration token.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a method to update a page's properties using the PATCH request in Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Draft a Python script to delete a block from a Notion page using the API's DELETE request.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How can you modify the maximum number of items returned in a single API response from the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write code to handle the 'has_more' field in paginated responses from the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Set up an integration with the Notion API and retrieve your integration token.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Construct a method to retrieve all children of a given block using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Using the Notion API, how would you retrieve the UUIDv4 \"id\" property of a user?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a JavaScript function using the Notion SDK to make a GET request to the /users endpoint.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Explain how to request specific results or limit the number of returned items using pagination in the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a method to use the Notion API to retrieve the type of a particular resource.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Create a Python script that uses the Notion API to retrieve the properties of a specific database.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you use the Notion API to retrieve a specific page using its UUIDv4 \"id\" property?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a function to handle the 'start_cursor' parameter in paginated requests to the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Create a function that uses the Notion API to return the type of objects in the results of a response.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a method to make a PATCH request to the Notion API to update a specific database.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Use the Notion API to create a new user in the workspace.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a Python script to retrieve a specific block's children using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a function that uses the Notion API to check whether a response includes the end of the list.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you retrieve the next page of query results from a database using the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a function to make a DELETE request to the Notion API to remove a specific comment.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "Write a script that fetches all users from a specific Notion workspace.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Can you retrieve the comments from a specific block id using the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a method to search for a specific title in all databases using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Construct a function that returns the properties of a certain page in a Notion workspace.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  With the Notion API, find out how to retrieve children of a specific block.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a mechanism to paginate through a list of objects returned from the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you authenticate your application with the Notion API using an integration token?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Demonstrate how to query a database in the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Can you create a program that uses the Notion API to list all users in a workspace?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a code snippet for handling pagination in responses from the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you use the Notion API to create a new page in a workspace?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a script to update a page property using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Explain how to delete a block in a database using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Could you create a function that uses the Notion API to retrieve the details of a specific user?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script that fetches and prints the next page of query results from a database using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a method to add a comment to a specific block using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Illustrate how to use the Notion API to retrieve a specific comment.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Construct a function that uses the Notion API to update a specific user\u2019s details.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Can you demonstrate how to delete a page using the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script to create a new user in a given workspace using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a mechanism to update a comment using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Show how to use the Notion API to retrieve the properties of a specific database.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Can you construct a function that uses the Notion API to update the details of a specific database?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a code snippet that uses the Notion API to delete a specific user from a workspace.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a method to retrieve a list of all databases in a workspace using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Demonstrate how to use the Notion API to update the properties of a page.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you use the Notion API to retrieve the details of a specific block in a database?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a script to add a new comment to a specific page using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "How can you retrieve the properties of a specific page using the Notion API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Demonstrate how to use the Notion API to search for a title in the database.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Build a script to paginate through a list of users using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a method to fetch the children of a block through the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a program that uses the Notion API to query a database and return a specific number of items.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Use the Notion API to delete a block from a database.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How would you list all users on a Notion workspace using the API?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Design a system to automatically fetch and update comments using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a code snippet to authenticate your application with the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Use the Notion API to edit a user's details.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  How can you use the Notion API to fetch the next page of results from a database query?\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a function to retrieve a comment using its id from the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a Python script that uses the Notion API to fetch the properties of a page.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Show how to use the Notion API to check if a paginated response contains more results.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a procedure to get a specific user's details using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Demonstrate how to retrieve a block's children using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Construct a routine to perform a search by title operation using Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Develop a program to paginate through a list of comments using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Display how to use the Notion API to modify a page's properties.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Construct a script to authenticate your integration with the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Illustrate how to use the Notion API to retrieve the next cursor in a paginated response.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Using the Notion API, show how to list all users in a workspace.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Write a program that uses the Notion API to query a database and return results based on a start cursor.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Exemplify how to use the Notion API to retrieve a comment using its id.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Create a routine to fetch and update a user's details using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Demonstrate how to paginate through a list of blocks using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Implement a way to check if a paginated response contains more results using the Notion API.\n", "url": "https://developers.notion.com/reference"}
+{"instruction": "\n  Show how to delete a block in a Notion database using the API.\n", "url": "https://developers.notion.com/reference"}

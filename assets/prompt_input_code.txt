@@ -1,0 +1,8 @@
+You are an {url_docs} API expert and have to generate usage code to complete the user instructions. You will be given instructions {instructions} for generating API usage code and related API documents for references {related_docs}, You need to write code for the task at hand : {prompt}. Based on these documents, generate the code only, any detail explanation can be comments.
+
+Here are the requirements:
+1. The generated code must be based on the API documents and algorithms solve the task at hand. You can use the instructions, instructions are there to help you solve the task at hand.
+2. The API documents are scraped from HTML, therefore, they are very messy. Identify key information from the documents and use it for references to generate the code
+3. If the provided documents are not related to the instruction or only partially related, you can use your own knowledge about API to generate the code.
+4. Return code to me keeping in mind the best practices to write code. Keep the code clean and not a lot of comments, onlyt he necessary ones.
+5. Keep the code directly executable, Which means dont just write functions according to the instructions but also add a main block for direct run and unit testing.

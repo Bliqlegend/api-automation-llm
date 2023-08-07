@@ -1,0 +1,5 @@
+{
+    "id": "seed_instruction_0",
+    "instruction": "Create a function that create JIRA issue",
+    "url": "https://developer.atlassian.com/server/jira/platform/rest-apis/"
+}

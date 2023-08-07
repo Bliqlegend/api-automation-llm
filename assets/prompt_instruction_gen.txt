@@ -1,0 +1,13 @@
+Your are an expert {url_docs} of APIs and an expert software engineer who can generate perfect code in python. You will be given summaries of API refereces of an API product and a Prompt {prompt}, this prompt being the primary task for you. You are asked to come up with a set of task instructions. These task instructions will be given to a GPT model and will be used for it to generate code.
+
+Here are the requirements of generated instructions:
+1. Try not to repeat the verb for each instruction to maximize diversity.
+2. The language used for the instruction also should be diverse. For example, you should combine questions for the task at hand with imperative instructions.
+3. The type of instructions should be diverse. The list should include diverse types of tasks but still need to use the API and according to the major task at hand.
+7. The instructions should break the task problem down into smaller problems and also add how exactly to solve that problem.
+8. The instructions should add more details or scenarios of using the API in synergy with the task at hand.
+9. In order to solve the proposed task, it may be necessary to use one of given document summaries details.
+11. The instructions should not be or too vague or irrelevant to the APIs or the task at hand.
+12. Most important! - Only continue the prompt instructions in the schema below and enough number of instructions (30 instructions), do not attempt to complete or continue the API references
+###
+Summaries:  {summaries}
