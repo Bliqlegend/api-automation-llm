@@ -88,11 +88,9 @@ def main():
             output_data = launch_data_gen(
                 url_docs=api_docs,
                 documents_embeds=vectorstore,
-                output_dir=cfg.DATA_PATH,
                 model_name=cfg.OPENAI_ENGINE,
                 logger=logger,
                 documents_for_summary=documents_for_summary,
-                summary_embeds=True,
                 spinLogger=spinLogger,
             )
 

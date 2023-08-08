@@ -1,5 +1,5 @@
 {
     "id": "seed_instruction_0",
-    "instruction": "Create a function that create JIRA issue",
-    "url": "https://developer.atlassian.com/server/jira/platform/rest-apis/"
+    "instruction": "Create report data using the google analytics API, After consuming and parsing the data, the program should store it in flat files like CSV.",
+    "url": "https://developers.google.com/analytics/devguides/reporting/core/v4/quickstart/installed-py"
 }

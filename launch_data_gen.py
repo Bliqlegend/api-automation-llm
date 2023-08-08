@@ -122,6 +122,7 @@ def launch_data_gen(
 
     logger.info("Code Generation Ends...")
     spinLogger.info("Code Generation Ends...")
+    spinLogger.info("Proof Reading code...")
 
     output_data = {
         "input": seed_instructions["instruction"],

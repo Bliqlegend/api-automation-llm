@@ -80,12 +80,15 @@ class APIReferenceLoader(WebBaseLoader):
         options = Options()
         options.headless = True
         options.binary = FirefoxBinary(
-            "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+            # "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+            "./firefox"
         )
 
         service = FirefoxService(
-            executable_path="D:\\2023\\AI\\api-automation-llm\\geckodriver.exe"
+            # executable_path="D:\\2023\\AI\\api-automation-llm\\geckodriver.exe"
+            executable_path="./geckodriver"
         )
+
         driver = webdriver.Firefox(service=service, options=options)
         return driver
 
