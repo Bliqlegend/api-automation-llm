@@ -81,7 +81,8 @@ class APIReferenceLoader(WebBaseLoader):
         options.headless = True
         options.binary = FirefoxBinary(
             # "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
-            "./firefox"
+            # "./firefox"
+            "/usr/bin/firefox"
         )
 
         service = FirefoxService(
