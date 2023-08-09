@@ -33,6 +33,14 @@ class SpinnerLogger:
 spinLogger = SpinnerLogger(st)
 
 
+def clean_env_if_any():
+    if os.path.exists(".env"):
+        try:
+            os.remove(".env")
+        except Exception as e:
+            print(f"Error removing .env file: {e}")
+
+
 def create_seed_instructions(user_prompt, api_docs, cfg):
     data = {"id": "seed_instruction_0", "instruction": user_prompt, "url": api_docs}
 
@@ -43,10 +51,50 @@ def create_seed_instructions(user_prompt, api_docs, cfg):
         json.dump(data, f, indent=4)
 
 
+def write_to_env(api_key):
+    with open(".env", "w") as f:
+        f.write(f'OPENAI_API_KEY="{api_key}"')
+
+
+models = [
+    {"name": "gpt-3.5-turbo", "token_limit": 4096},
+    {"name": "gpt-3.5-turbo-0301", "token_limit": 4096},
+    {"name": "gpt-3.5-turbo-0613", "token_limit": 4096},
+    {"name": "gpt-3.5-turbo-16k", "token_limit": 16384},
+    {"name": "gpt-3.5-turbo-16k-0613", "token_limit": 16384},
+    {"name": "gpt-4", "token_limit": 8192},
+    {"name": "gpt-4-0314", "token_limit": 8192},
+    {"name": "gpt-4-0613", "token_limit": 8192},
+]
+
+
 def main():
+    clean_env_if_any()
     st.title("API Docs to Code.")
 
     cfg = OmegaConf.load(os.path.abspath("config.yaml"))
+
+    if st.text_input(
+        "OpenAI API Key",
+        value=st.session_state.get("OPENAI_API_KEY", ""),
+        key="input_OPENAI_API_KEY",
+        type="password",
+    ):
+        if len(st.session_state["input_OPENAI_API_KEY"]) > 0 and st.session_state[
+            "input_OPENAI_API_KEY"
+        ] != st.session_state.get("OPENAI_API_KEY", ""):
+            st.session_state["OPENAI_API_KEY"] = st.session_state[
+                "input_OPENAI_API_KEY"
+            ]
+        write_to_env(st.session_state["OPENAI_API_KEY"])
+    model_names = [e["name"] for e in models]
+    selected_model = st.selectbox("Select Model", model_names)
+
+    if selected_model:
+        st.write(f"You selected: {selected_model}")
+
+        st.session_state["selected_model"] = selected_model
+
     api_docs = st.text_input("Enter API docs URL here.")
     user_prompt = st.text_input("Describe code you want to generate.")
 
@@ -88,7 +136,7 @@ def main():
             output_data = launch_data_gen(
                 url_docs=api_docs,
                 documents_embeds=vectorstore,
-                model_name=cfg.OPENAI_ENGINE,
+                model_name=selected_model,
                 logger=logger,
                 documents_for_summary=documents_for_summary,
                 spinLogger=spinLogger,

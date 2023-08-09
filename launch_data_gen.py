@@ -10,6 +10,12 @@ from langchain import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
 import re
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def truncate(encoding, prompt, max_size):
@@ -39,7 +45,7 @@ def launch_data_gen(
     logger.info("Summarization of embeddings begins")
     spinLogger.info("Summarization of embeddings begins....")
 
-    encoding_gpt4 = tiktoken.encoding_for_model(model_name)
+    encoding = tiktoken.encoding_for_model(model_name)
 
     with open(seed_instructions_path, "r") as f:
         seed_instructions = json.load(f)
@@ -54,7 +60,7 @@ def launch_data_gen(
                 {
                     "role": "user",
                     "content": summary_prompt.format(
-                        passage=truncate(encoding_gpt4, doc.page_content, 3100)
+                        passage=truncate(encoding, doc.page_content, 3100)
                     ),
                 }
             ],
@@ -93,6 +99,9 @@ def launch_data_gen(
         summaries=summary_embeddings,
         prompt=seed_instructions["instruction"],
     )
+
+    print(generated_instructons)
+
     logger.info("Instruction Generation ends")
     logger.info("Code Generation Begins")
 

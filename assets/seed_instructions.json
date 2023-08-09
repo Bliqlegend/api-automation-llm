@@ -1,5 +1,5 @@
 {
     "id": "seed_instruction_0",
-    "instruction": "Create report data using the google analytics API, After consuming and parsing the data, the program should store it in flat files like CSV.",
-    "url": "https://developers.google.com/analytics/devguides/reporting/core/v4/quickstart/installed-py"
+    "instruction": "Send an email to a recipient, send the latest template from all templates according to timestamp",
+    "url": "https://developers.mailersend.com/api/v1/email.html"
 }

@@ -22,8 +22,11 @@ import re
 import tqdm
 import time
 from dotenv import load_dotenv
+import openai
 
 load_dotenv()
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 class APIReferenceLoader(WebBaseLoader):
@@ -80,14 +83,13 @@ class APIReferenceLoader(WebBaseLoader):
         options = Options()
         options.headless = True
         options.binary = FirefoxBinary(
-            # "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
-            # "./firefox"
-            "/usr/bin/firefox"
+            "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+            # "/usr/bin/firefox"
         )
 
         service = FirefoxService(
-            # executable_path="D:\\2023\\AI\\api-automation-llm\\geckodriver.exe"
-            executable_path="./geckodriver"
+            executable_path="D:\\2023\\AI\\api-automation-llm\\geckodriver.exe"
+            # executable_path="./geckodriver"
         )
 
         driver = webdriver.Firefox(service=service, options=options)
