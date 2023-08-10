@@ -1,5 +1,5 @@
 {
     "id": "seed_instruction_0",
-    "instruction": "Send an email to a recipient, send the latest template from all templates according to timestamp",
-    "url": "https://developers.mailersend.com/api/v1/email.html"
+    "instruction": "Create a Python function that imports a Markdown file's content into a new Notion page.",
+    "url": "https://developers.notion.com/reference"
 }

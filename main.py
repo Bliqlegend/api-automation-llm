@@ -7,10 +7,8 @@ from launch_data_gen import launch_data_gen
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores.faiss import FAISS
 import json
-from dotenv import load_dotenv
 import time
 
-load_dotenv()
 
 # Logging setup
 logger = logging.getLogger(__name__)
@@ -33,14 +31,6 @@ class SpinnerLogger:
 spinLogger = SpinnerLogger(st)
 
 
-def clean_env_if_any():
-    if os.path.exists(".env"):
-        try:
-            os.remove(".env")
-        except Exception as e:
-            print(f"Error removing .env file: {e}")
-
-
 def create_seed_instructions(user_prompt, api_docs, cfg):
     data = {"id": "seed_instruction_0", "instruction": user_prompt, "url": api_docs}
 
@@ -49,11 +39,6 @@ def create_seed_instructions(user_prompt, api_docs, cfg):
 
     with open(os.path.join(cfg.DATA_PATH, "seed_instructions.json"), "w") as f:
         json.dump(data, f, indent=4)
-
-
-def write_to_env(api_key):
-    with open(".env", "w") as f:
-        f.write(f'OPENAI_API_KEY="{api_key}"')
 
 
 models = [
@@ -69,7 +54,6 @@ models = [
 
 
 def main():
-    clean_env_if_any()
     st.title("API Docs to Code.")
 
     cfg = OmegaConf.load(os.path.abspath("config.yaml"))
@@ -86,9 +70,12 @@ def main():
             st.session_state["OPENAI_API_KEY"] = st.session_state[
                 "input_OPENAI_API_KEY"
             ]
-        write_to_env(st.session_state["OPENAI_API_KEY"])
+
     model_names = [e["name"] for e in models]
     selected_model = st.selectbox("Select Model", model_names)
+    token_limit = next(
+        (e["token_limit"] for e in models if e["name"] == selected_model), None
+    )
 
     if selected_model:
         st.write(f"You selected: {selected_model}")
@@ -119,9 +106,15 @@ def main():
             )
 
             documents, documents_for_summary = ingest_docs(
-                api_docs, recursive_depth=cfg.DEPTH_CRAWLING, logger=logger
+                api_docs,
+                recursive_depth=cfg.DEPTH_CRAWLING,
+                logger=logger,
+                api_key=st.session_state["OPENAI_API_KEY"],
             )
-            embeddings = OpenAIEmbeddings()
+
+            embeddings = OpenAIEmbeddings(
+                openai_api_key=st.session_state["OPENAI_API_KEY"]
+            )
             vectorstore = FAISS.from_documents(documents, embeddings)
             logger.info(
                 "Done indexing and embedding docs from {api}...".format(api=api_docs)
@@ -140,6 +133,8 @@ def main():
                 logger=logger,
                 documents_for_summary=documents_for_summary,
                 spinLogger=spinLogger,
+                token_limit=token_limit,
+                api_key=st.session_state["OPENAI_API_KEY"],
             )
 
             logger.info("Done with Code Generateion Block...")

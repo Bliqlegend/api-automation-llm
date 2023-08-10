@@ -17,16 +17,10 @@ import contextlib
 import lxml.html as LH
 import lxml.html.clean as clean
 import requests
-import os
 import re
 import tqdm
 import time
-from dotenv import load_dotenv
 import openai
-
-load_dotenv()
-
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 class APIReferenceLoader(WebBaseLoader):
@@ -98,7 +92,7 @@ class APIReferenceLoader(WebBaseLoader):
     def scrape_visible_elements(self, url):
         ignore_tags = "style"
         with contextlib.closing(self.driver) as browser:
-            browser.get(url)  # Load page
+            browser.get(url)
             time.sleep(10)
             content = browser.page_source
             cleaner = clean.Cleaner()
@@ -162,9 +156,15 @@ def hierarchy_links(
 
 
 def ingest_docs(
-    url_docs: str, recursive_depth: int = 1, return_summary: bool = True, logger=None
+    url_docs: str,
+    recursive_depth: int = 1,
+    return_summary: bool = True,
+    logger=None,
+    api_key=None,
 ) -> Tuple[List, List]:
-    embeddings = OpenAIEmbeddings()
+    openai.api_key = api_key
+
+    embeddings = OpenAIEmbeddings(openai_api_key=api_key)
     docs_link = set(hierarchy_links(url_docs, recursive_depth))
     documents = list()
     docs_for_summary = list()

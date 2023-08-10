@@ -20,3 +20,6 @@ def summarize_chain(summary_template, temperature, doc, encoding_gpt3):
     llm = ChatOpenAI(temperature=temperature, model_name="gpt-3.5-turbo")
     chain = LLMChain(llm=llm, prompt=summary_prompt)
     return chain.run(passage=truncate(encoding_gpt3, doc.page_content, 3100))
+
+
+# and related API documents for references {related_docs}

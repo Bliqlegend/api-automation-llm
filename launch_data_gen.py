@@ -10,12 +10,7 @@ from langchain import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
 import re
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-openai.api_key = os.getenv("OPENAI_API_KEY")
+from langchain.text_splitter import CharacterTextSplitter
 
 
 def truncate(encoding, prompt, max_size):
@@ -33,6 +28,22 @@ def extract_code_block(text):
         return None
 
 
+def chunk_text(text: str, chunk_size: int = 4096, encoding: int = 4) -> list[str]:
+    chunks = []
+    current_chunk = []
+
+    for token in encoding:
+        current_chunk.append(token)
+        if sum(len(t) for t in current_chunk) >= chunk_size:
+            chunks.append("".join(current_chunk))
+            current_chunk = []
+
+        if current_chunk:
+            chunks.append("".join(current_chunk))
+
+        return chunks
+
+
 def launch_data_gen(
     url_docs,
     documents_embeds,
@@ -40,7 +51,11 @@ def launch_data_gen(
     logger=None,
     documents_for_summary=None,
     spinLogger=None,
+    token_limit=4096,
+    api_key=None,
 ):
+    openai.api_key = api_key
+
     seed_instructions_path = "assets/seed_instructions.json"
     logger.info("Summarization of embeddings begins")
     spinLogger.info("Summarization of embeddings begins....")
@@ -72,7 +87,7 @@ def launch_data_gen(
     with open("assets/vectorstore_summary.pkl", "rb") as f:
         summary_embeddings = pickle.load(f)
 
-    embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings(openai_api_key=api_key)
     vectorstore = FAISS.from_documents(embed_docs, embeddings)
 
     logger.info("Summary Vectorstore is storing in assets/vectorstore_summary.pkl")
@@ -91,16 +106,26 @@ def launch_data_gen(
         template=prompt_template,
     )
 
-    llm = ChatOpenAI(temperature=0.9, model_name=model_name)
+    generated_instructons = []
 
-    chain = LLMChain(llm=llm, prompt=instructions_gen_prompt)
-    generated_instructons = chain.run(
-        url_docs=url_docs,
-        summaries=summary_embeddings,
-        prompt=seed_instructions["instruction"],
-    )
+    for _, doc in tqdm(enumerate(embed_docs)):
+        instruction = openai.ChatCompletion.create(
+            model=model_name,
+            messages=[
+                {
+                    "role": "user",
+                    "content": instructions_gen_prompt.format(
+                        summaries=truncate(encoding, doc.page_content, 5000),
+                        url_docs=url_docs,
+                        prompt=seed_instructions["instruction"],
+                    ),
+                }
+            ],
+            max_tokens=700,
+        )["choices"][0]["message"]["content"]
+        generated_instructons.append(instruction)
 
-    print(generated_instructons)
+    generated_instructons_text = " ".join(generated_instructons)
 
     logger.info("Instruction Generation ends")
     logger.info("Code Generation Begins")
@@ -108,34 +133,47 @@ def launch_data_gen(
     spinLogger.info("Instruction Generation ends....")
     spinLogger.info("Code Generation Begins....")
 
-    related_docs = documents_embeds.similarity_search(generated_instructons, k=2)
+    related_docs = documents_embeds.similarity_search(generated_instructons_text, k=2)
     related_docs.extend(
         documents_embeds.similarity_search(seed_instructions["instruction"], k=2)
     )
 
     code_template = open("assets/prompt_input_code.txt").read() + "\n"
     code_prompt = PromptTemplate(
-        input_variables=["url_docs", "instructions", "related_docs", "prompt"],
+        input_variables=["related_docs", "instructions", "prompt"],
         template=code_template,
     )
+    
+    generated_code = []
+    for _, instruction in tqdm(enumerate(generated_instructons)):
+        code_blocks = openai.ChatCompletion.create(
+            model=model_name,
+            messages=[
+                {
+                    "role": "user",
+                    "content": code_prompt.format(
+                        instructions=truncate(encoding, instruction, 5000),
+                        related_docs=related_docs,
+                        prompt=seed_instructions["instruction"],
+                    ),
+                }
+            ],
+            max_tokens=700,
+        )["choices"][0]["message"]["content"]
+        generated_code.append(code_blocks)
 
-    llm = ChatOpenAI(temperature=0.9, model_name=model_name)
+    code_text = " "
 
-    chain = LLMChain(llm=llm, prompt=code_prompt)
-    generated_code = chain.run(
-        url_docs=url_docs,
-        prompt=seed_instructions["instruction"],
-        instructions=generated_instructons,
-        related_docs=related_docs,
-    )
+    print(generated_code)
+
+    for current_block in generated_code:
+        code_output = extract_code_block(current_block)
+        code_text += code_output + "\n"
 
     logger.info("Code Generation Ends...")
     spinLogger.info("Code Generation Ends...")
     spinLogger.info("Proof Reading code...")
 
-    output_data = {
-        "input": seed_instructions["instruction"],
-        "output": extract_code_block(generated_code),
-    }
+    output_data = {"input": seed_instructions["instruction"], "output": code_text}
 
     return output_data
